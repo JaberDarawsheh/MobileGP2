@@ -10,6 +10,7 @@ body {
     flex-wrap: wrap;
     transform: scale(0.9);
     background: #DFF2FF !important; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .container {

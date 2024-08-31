@@ -10,6 +10,7 @@ body {
     flex-wrap: wrap;
     background: #DFF2FF !important; 
     transform: scale(0.91);
+    
 }
 
 .container {
@@ -23,51 +24,30 @@ body {
     background-position: center;
     height: 220px; /* Increased height to accommodate the image and larger title */
     display: flex;
-    align-items: center; /* Align items vertically */
-    justify-content: space-between; /* Space between image and text */
-    padding: 20px; /* Add padding for spacing */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center;
+    align-items: center;
     border-radius: 20px 20px 0 0;
     position: relative;
+}
+
+.header h2 {
+    color: white; /* Updated text color */
+    font-size: 32px; /* Increased font size for larger title */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 15px 30px;
+    border-radius: 15px;
+    position: absolute;
+    top: 10px; /* Further adjusted position to raise the title */
 }
 
 .small-image {
     width: 120px; /* Adjust size as needed */
     height: auto; /* Maintain aspect ratio */
+    margin-top: 80px; /* Increased space between title and image */
     border-radius: 10px; /* Optional: rounded corners */
-}
-
-.water-tank-level {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align text to the start */
-    margin-left: 20px; /* Space between the image and the text */
-}
-
-.water-tank-level h3, .water-tank-level p {
-    margin: 0;
-}
-
-.water-tank-icon {
-    width: 50px;
-    height: 50px;
-    margin-right: 15px;
-}
-
-.water-level-details {
-    flex-grow: 1;
-}
-
-.water-level-details h3 {
-    font-size: 16px;
-    margin: 0;
-    color: #333;
-}
-
-.water-level-details p {
-    font-size: 24px;
-    margin: 5px 0 0;
-    font-weight: bold;
-    color: #00796b;
 }
 
 .content {
@@ -189,3 +169,39 @@ body {
         padding: 12px;
     }
 }
+
+/* Water Tank Level Section */
+.water-tank-level {
+    display: flex;
+    align-items: center;
+    background: rgba(240, 240, 240, 0.85);
+    border-radius: 15px;
+    padding: 15px;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.water-tank-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.water-level-details {
+    flex-grow: 1;
+}
+
+.water-level-details h3 {
+    font-size: 16px;
+    margin: 0;
+    color: #333;
+}
+
+.water-level-details p {
+    font-size: 24px;
+    margin: 5px 0 0;
+    font-weight: bold;
+    color: #00796b;
+}
+

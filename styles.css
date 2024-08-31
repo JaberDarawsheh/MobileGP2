@@ -17,9 +17,8 @@ body {
     width: 100%;
     background: #DFF2FF; 
     border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     overflow: hidden;
-    padding: 30px;
+    padding: 60px;
 }
 
 .header {

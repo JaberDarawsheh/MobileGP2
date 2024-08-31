@@ -9,6 +9,7 @@ body {
     direction: rtl; 
     flex-wrap: wrap;
     background: #DFF2FF !important; 
+    transform: scale(0.91);
 }
 
 .container {

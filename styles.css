@@ -8,7 +8,7 @@ body {
     height: 70vh;
     direction: rtl; 
     flex-wrap: wrap;
-    transform: scale(0.7);
+    transform: scale(0.9);
 }
 
 .container {

@@ -16,9 +16,8 @@ body {
 .container {
     width: 100%;
     background: #DFF2FF; 
-    border-radius: 20px;
     overflow: hidden;
-    padding: 60px;
+    padding: 20px;
 }
 
 .header {

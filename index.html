@@ -6,13 +6,18 @@
     <title>Tank Sensors</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Adding light red background color class */
+        .light-red {
+            background-color: #f28b82; /* Light red color */
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h2>Tank Sensors</h2>
             <img src="imgg.png" alt="Fish Image" class="small-image">
-           
         </div>
         <div class="content">
             <div class="sensor-box">
@@ -23,11 +28,11 @@
                         <p>Off</p>
                     </div>
                 </div>
-                <div class="sensor temp">
+                <div class="sensor temp" id="tempSensor">
                     <div class="settings-icon"></div>
                     <div class="details">
                         <h3>Temp</h3>
-                        <p>35°</p>
+                        <p id="tempValue">35°</p>
                     </div>
                 </div>
                 <div class="sensor air-ph">
@@ -56,12 +61,29 @@
             <div class="footer">
                 <h3>Today - Aquarium Status</h3>
                 <div class="status-field">
-                    
                     Bubbles : ON<br>
                     Feeder  : ON
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        // Function to change the background color based on temperature
+        function updateTempBackground() {
+            const tempElement = document.getElementById('tempValue');
+            const tempSensor = document.getElementById('tempSensor');
+            let temp = parseInt(tempElement.textContent);
+
+            if (temp <= 17 || temp > 34) {
+                tempSensor.classList.add('light-red');
+            } else {
+                tempSensor.classList.remove('light-red');
+            }
+        }
+
+        // Call the function on page load
+        updateTempBackground();
+    </script>
 </body>
 </html>

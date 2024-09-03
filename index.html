@@ -25,14 +25,14 @@
                     <div class="settings-icon"></div>
                     <div class="details">
                         <h3>Light</h3>
-                        <p>ON</p>
+                        <p>Off</p>
                     </div>
                 </div>
                 <div class="sensor temp" id="tempSensor">
                     <div class="settings-icon"></div>
                     <div class="details">
                         <h3>Temp</h3>
-                        <p id="tempValue">15</p>
+                        <p id="tempValue">35°</p>
                     </div>
                 </div>
                 <div class="sensor air-ph">
@@ -73,8 +73,11 @@
         function updateTempBackground() {
             const tempElement = document.getElementById('tempValue');
             const tempSensor = document.getElementById('tempSensor');
-            let temp = parseInt(tempElement.textContent);
+            
+            // Remove the degree symbol and convert the value to an integer
+            let temp = parseInt(tempElement.textContent.replace('°', ''));
 
+            // Check the temperature and update the background color
             if (temp <= 17 || temp > 34) {
                 tempSensor.classList.add('light-red');
             } else {
